@@ -1,5 +1,5 @@
-function List() {
+function EventList() {
     return ();
   }
   
-  export default List;
+  export default EventList;
