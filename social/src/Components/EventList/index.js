@@ -4,10 +4,11 @@ function EventList({className, data}) {
   console.log(data)
     return (
       <ul className={className}>
-        <ListItem text="Testing" />
-        <ListItem text="Testing" />
-        <ListItem text="Testing" />
-        <ListItem text="Testing" />
+        {data.map (
+          social => (
+            <ListItem data = {social} />
+          )
+        )}
       </ul>
     );
   }
