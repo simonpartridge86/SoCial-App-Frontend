@@ -1,5 +1,12 @@
+import Button from "../Button";
+
 function EventForm() {
-    return ();
+    return (
+      <form>
+        <input type="text"></input>
+        <Button className="form-button" />
+      </form>
+    );
   }
   
   export default EventForm;
