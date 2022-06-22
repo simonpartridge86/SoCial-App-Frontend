@@ -12,7 +12,8 @@ import EventList from '../EventList';
 
 function App() {
 
-const localHost = "https://localhost:3001"
+const localHost = "http://localhost:3001"
+// http://localhost:3001/events
 
 const [events, setEvents] = useState([]);
 
@@ -21,8 +22,8 @@ const [events, setEvents] = useState([]);
 async function getEvents() {
   const response = await fetch (`${localHost}/events`);
   const data = await response.json();
-  console.log(data);
-  setEvents(data);
+  console.log(data.payload);
+  setEvents(data.payload);
 };
 
 
@@ -33,8 +34,8 @@ async function postEvent(object){
     body: JSON.stringify(object)
   });
   const data = await response.json();
-  console.log(data);
-  setEvents(data);
+  console.log(data.payload);
+  setEvents(data.payload);
 };
 
 

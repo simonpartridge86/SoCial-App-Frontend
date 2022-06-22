@@ -5,30 +5,30 @@ function EventForm({addEvent}) {
 
   // starting state of the form 
   const [eventObject, setEventObject] = useState({
-    event_type: "Social",
-    event_description: "",
-    event_author: "",
+    type: "Social",
+    description: "",
+    author: "",
     social_link: "",
     date: "",
-    time_start: "",
-    time_end: "",
+    start_time: "",
+    end_time: "",
   })
 
   //////////////////////////////////////////////
   // Below functions store the relevant values from the input boxes of form. They update a new immutable object ready for submission.
 
   function handleType(e){
-    setEventObject({...eventObject, event_type: e.target.value})
+    setEventObject({...eventObject, type: e.target.value})
     //console.log(e.target.value)
   }
 
   function handleDescription(e){
-    setEventObject({...eventObject, event_description: e.target.value})
+    setEventObject({...eventObject, description: e.target.value})
     //console.log(e.target.value)
   }
 
   function handleAuthor(e){
-    setEventObject({...eventObject, event_author: e.target.value})
+    setEventObject({...eventObject, author: e.target.value})
     //console.log(e.target.value)
   }
 
@@ -60,12 +60,12 @@ function EventForm({addEvent}) {
 
 
   function handleTimeStart(e){
-    setEventObject({...eventObject, time_start: e.target.value})
+    setEventObject({...eventObject, start_time: e.target.value})
     //console.log(e.target.value)
   }
 
   function handleTimeEnd(e){
-    setEventObject({...eventObject, time_end: e.target.value})
+    setEventObject({...eventObject, end_time: e.target.value})
     //console.log(e.target.value)
   }
 
@@ -84,13 +84,13 @@ function EventForm({addEvent}) {
     // We give this function the eventObject - this is a piece of state created by the multiple handle functions above.
     addEvent(eventObject);
     setEventObject({
-      event_type: "Social",
-      event_description: "",
-      event_author: "",
+      type: "Social",
+      description: "",
+      author: "",
       social_link: "",
       date: "",
-      time_start: "",
-      time_end: "",
+      start_time: "",
+      end_time: "",
     });
   }
 
@@ -99,20 +99,20 @@ function EventForm({addEvent}) {
   return (
     <form onSubmit={(e) => onSubmit(e)}>
       <label htmlFor="event-type">Event type:</label>
-      <select className="event-type" id="event-type" onChange={(e)=>{handleType(e)}} value={eventObject.event_type} required>
+      <select className="event-type" id="event-type" onChange={(e)=>{handleType(e)}} value={eventObject.type} required>
         <option value="Social">Social</option>
         <option value="Coding Help">Coding Help</option>
         <option value="Course Chat">Course Chat</option>
         <option value="Games Session">Games Session</option>
       </select>
-      <input type="text" className="event-description" id="event-description" placeholder="Add event description" onChange={(e)=>{handleDescription(e)}} value={eventObject.event_description} required></input>
-      <input type="text" className="event-author" id="event-author" placeholder="Event host name" onChange={(e)=>{handleAuthor(e)}} value={eventObject.event_author} required></input>
+      <input type="text" className="event-description" id="event-description" placeholder="Add event description" onChange={(e)=>{handleDescription(e)}} value={eventObject.description} required></input>
+      <input type="text" className="event-author" id="event-author" placeholder="Event host name" onChange={(e)=>{handleAuthor(e)}} value={eventObject.author} required></input>
       <label htmlFor="date-selector">Select date:</label>
       <input type="date" className="date-selector" id="date-selector" onChange={(e)=>{handleDate(e)}} required></input>
       <label htmlFor="time-start">Start:</label>
-      <input type="time" className="time-start" id="time-start" onChange={(e)=>{handleTimeStart(e)}} value={eventObject.time_start} required></input>
+      <input type="time" className="time-start" id="time-start" onChange={(e)=>{handleTimeStart(e)}} value={eventObject.start_time} required></input>
       <label htmlFor="time-start">End:</label>
-      <input type="time" className="time-end" id="time-end" onChange={(e)=>{handleTimeEnd(e)}} value={eventObject.time_end} required></input>
+      <input type="time" className="time-end" id="time-end" onChange={(e)=>{handleTimeEnd(e)}} value={eventObject.end_time} required></input>
       <input type="url" className="social-link" id="social-link" onChange={(e)=>{handleLink(e)}} placeholder="Paste meeting link/URL here" value={eventObject.social_link} required></input>
       <Button className="form-button" text="Submit"/>
     </form>
