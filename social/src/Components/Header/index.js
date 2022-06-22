@@ -1,11 +1,11 @@
-import Logo from './social-logo.png'
+import Logo from './social-logo.png';
+import './index.css';
 
 function Header({className}) {
   // Logo for the app
     return (
       <div className={className}>
-        <img src={Logo} alt="app-logo" />
-        <h2>Where the cool dudes hang out</h2>
+        <h2>{"{SoC}ial"}</h2>
       </div>
     );
   }
