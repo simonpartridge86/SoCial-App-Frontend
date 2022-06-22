@@ -10,8 +10,9 @@ function ListItem({data}) {
 
     return (
       <div className='event-card'>
-        <h1 className='event-title'>{data.event_title}</h1>
+        <h1 className='event-type'>{data.event_type}</h1>
         <p className='event-description'>{data.event_description}</p>
+        <p className='event-author'>{data.event_author}</p>
         <p className='date'>{data.date}</p>
         <p className='time-start'>{data.time_start}</p>
         <p className='time-end'>{data.time_end}</p>

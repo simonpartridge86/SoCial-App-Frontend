@@ -6,7 +6,7 @@ function EventList({className, data}) {
       <ul className={className}>
         {data.map (
           social => (
-            <ListItem data = {social} />
+            <ListItem data={social} key={social.id}/>
           )
         )}
       </ul>
