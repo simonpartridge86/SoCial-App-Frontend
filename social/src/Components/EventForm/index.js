@@ -1,8 +1,9 @@
 import Button from "../Button";
 import {useState} from 'react';
 
-
 function EventForm({addEvent}) {
+
+  // starting state of the form 
   const [eventObject, setEventObject] = useState({
     event_type: "Social",
     event_description: "",
@@ -12,6 +13,9 @@ function EventForm({addEvent}) {
     time_start: "",
     time_end: "",
   })
+
+  //////////////////////////////////////////////
+  // Below functions store the relevant values from the input boxes of form. They update a new immutable object ready for submission.
 
   function handleType(e){
     setEventObject({...eventObject, event_type: e.target.value})
@@ -27,6 +31,11 @@ function EventForm({addEvent}) {
     setEventObject({...eventObject, event_author: e.target.value})
     //console.log(e.target.value)
   }
+
+  //////////////////////////////////////////////
+  // Below function stores the relevant date from the input box of form. They update a new immutable object ready for submission.
+  // Dates are being reformatted so they are comparable. If statement stops user entering a date in the past.
+
 
   function handleDate(e){
     const selectedDate = new Date(e.target.value);
@@ -46,6 +55,10 @@ function EventForm({addEvent}) {
     }
   }
 
+   ////////////////////////////////////////////////
+    // Below functions store the relevant values from the input boxes of form. They update a new immutable object ready for submission.
+
+
   function handleTimeStart(e){
     setEventObject({...eventObject, time_start: e.target.value})
     //console.log(e.target.value)
@@ -61,9 +74,14 @@ function EventForm({addEvent}) {
     //console.log(e.target.value)
   }
 
+  ////////////////////////////////////////////////
+  // Default reset once form has been submitted
+
   function onSubmit(e){
     e.preventDefault();
     console.log(eventObject);
+    // addEvent is a function from the app.js which has been passed down through a prop.
+    // We give this function the eventObject - this is a piece of state created by the multiple handle functions above.
     addEvent(eventObject);
     setEventObject({
       event_type: "Social",
@@ -75,6 +93,8 @@ function EventForm({addEvent}) {
       time_end: "",
     });
   }
+
+  ////////////////////////////////////////////////
 
   return (
     <form onSubmit={(e) => onSubmit(e)}>

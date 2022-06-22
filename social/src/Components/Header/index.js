@@ -1,6 +1,7 @@
 import Logo from './social-logo.png'
 
 function Header({className}) {
+  // Logo for the app
     return (
       <div className={className}>
         <img src={Logo} alt="app-logo" />
