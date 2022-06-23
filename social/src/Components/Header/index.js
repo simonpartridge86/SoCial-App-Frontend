@@ -5,7 +5,7 @@ function Header({className}) {
   // Logo for the app
     return (
       <div className={className}>
-        <h2>{"{SoC}ial"}</h2>
+        <h1>{"{SoC}ial"}</h1>
       </div>
     );
   }

@@ -7,7 +7,7 @@ import {useState, useEffect} from 'react';
 import Header from '../Header';
 import EventForm from '../EventForm';
 import EventList from '../EventList';
-import Image from '../EventImage';
+//import Image from '../EventImage';
 
 //////////////////////////////////
 
@@ -89,7 +89,6 @@ useEffect (()=>{
     <div className="app">
       <Header className="app-header" />
       <EventForm className="event-form" addEvent={postEvent} />
-      <Image classname="event-image" />
       <EventList className="event-list" data={events} />
     </div>
   );
