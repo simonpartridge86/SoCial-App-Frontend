@@ -11,6 +11,7 @@ function EventForm({addEvent}) {
     description: "",
     author: "",
     social_link: "",
+    attendance:0,
     date: "",
     start_time: "",
     end_time: "",
@@ -89,6 +90,7 @@ function EventForm({addEvent}) {
     addEvent(eventObject);
     setEventObject({
       type: "Social",
+      attendance: 0,
       description: "",
       author: "",
       social_link: "",
