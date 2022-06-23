@@ -122,8 +122,8 @@ function EventForm({addEvent}) {
 
       <label htmlFor="time-start">Start:</label>
       <input type="time" className="time-start" id="time-start" onChange={(e)=>{handleTimeStart(e)}} value={eventObject.start_time} required></input>
-      <label htmlFor="time-start">End:</label>
-      <input type="time" className="time-end" id="time-end" onChange={(e)=>{handleTimeEnd(e)}} value={eventObject.end_time} required></input>
+      <label htmlFor="time-end">End:</label>
+      <input type="time" className="time-end"  id="time-end" onChange={(e)=>{handleTimeEnd(e)}} value={eventObject.end_time} required></input>
       </div>
       
       <input type="url" className="social-link" id="social-link" onChange={(e)=>{handleLink(e)}} placeholder="Paste meeting link/URL here" value={eventObject.social_link} required></input>
