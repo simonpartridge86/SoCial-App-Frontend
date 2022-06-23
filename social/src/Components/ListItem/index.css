@@ -19,7 +19,48 @@
 
 .image{
   max-width: 50%;
+}
 
+.launch-button {
+  width: 250px;
+}
+
+.event-type {
+  font-size: 2rem;
+  font-family: Tahoma;
+  font-weight: bold;
+  color:magenta;
+}
+
+.event-description {
+  font-family: Times New Roman;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.event-author {
+  font-family: Times New Roman;
+  font-size: 1rem;
+}
+
+.date{
+  font-family: Times New Roman;
+  font-size: 1.25rem;
+}
+
+.time-start{
+  font-family: Times New Roman;
+  font-size: 1.25rem;
+}
+
+.time-end{
+  font-family: Times New Roman;
+  font-size: 1.25rem;
+}
+
+.attendance-counter{
+  font-family: Times New Roman;
+  font-size: 1rem;
 }
 
 @media(max-width:720px){

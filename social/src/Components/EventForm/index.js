@@ -106,14 +106,14 @@ function EventForm({addEvent}) {
   return (
     <form onSubmit={(e) => onSubmit(e)}>
       <label htmlFor="event-type">Event type:</label>
-      <select className="event-type" id="event-type" onChange={(e)=>{handleType(e)}} value={eventObject.type} required>
+      <select className="event-selector" id="event-type" onChange={(e)=>{handleType(e)}} value={eventObject.type} required>
         <option value="Social">Social</option>
         <option value="Coding Help">Coding Help</option>
         <option value="Course Chat">Course Chat</option>
         <option value="Games Session">Games Session</option>
       </select>
-      <input type="text" className="event-description" id="event-description" placeholder="Add event description" onChange={(e)=>{handleDescription(e)}} value={eventObject.description} required></input>
-      <input type="text" className="event-author" id="event-author" placeholder="Event host name" onChange={(e)=>{handleAuthor(e)}} value={eventObject.author} required></input>
+      <input type="text" className="event-description-input" id="event-description" placeholder="Add event description" onChange={(e)=>{handleDescription(e)}} value={eventObject.description} required></input>
+      <input type="text" className="event-author-input" id="event-author" placeholder="Event host name" onChange={(e)=>{handleAuthor(e)}} value={eventObject.author} required></input>
       <div className='date-section'>
       <label htmlFor="date-selector">Select date:</label>
 

@@ -95,10 +95,11 @@ useEffect (()=>{
     <div className="app">
       <Header className="app-header" />
       { formVis === false ?
+        
         <Button className="form-vis" onClick={()=>{setFormVis(true)}} text="Create Event"/>
       :
         <EventForm className="event-form" addEvent={postEvent} />
-      }      
+      }   
       <EventList className="event-list" data={events} setEvents={setEvents}/>
     </div>
   );
