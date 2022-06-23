@@ -95,7 +95,7 @@ useEffect (()=>{
       :
         <EventForm className="event-form" addEvent={postEvent} />
       }      
-      <EventList className="event-list" data={events} />
+      <EventList className="event-list" data={events} setEvents={setEvents}/>
     </div>
   );
 }
