@@ -1,3 +1,5 @@
+
+import './index.css';
 import Button from "../Button";
 import {useState} from 'react';
 
@@ -38,20 +40,13 @@ function EventForm({addEvent}) {
 
 
   function handleDate(e){
-    // const selectedDate = new Date(e.target.value);
-    // const now = new Date();
-    // const nowFormatted = new Date(now.toDateString())
-    // const selectedDateFormatted = new Date(selectedDate.toDateString())
-    // // console.log(selectedDate)
-    // // console.log(now)
-    // // console.log(selectedDateFormatted)
-    // // console.log(nowFormatted)
-    // if(selectedDateFormatted < nowFormatted){
+    //ΩateFormatted < nowFormatted){
     //   alert("Selected date is in the past")
     //   setEventObject({...eventObject, date: ""})
     // } else {
     //   const eventDate = selectedDate.toDateString();
       setEventObject({...eventObject, date: e.target.value})
+
   }
 
    ////////////////////////////////////////////////
@@ -117,12 +112,18 @@ function EventForm({addEvent}) {
       </select>
       <input type="text" className="event-description" id="event-description" placeholder="Add event description" onChange={(e)=>{handleDescription(e)}} value={eventObject.description} required></input>
       <input type="text" className="event-author" id="event-author" placeholder="Event host name" onChange={(e)=>{handleAuthor(e)}} value={eventObject.author} required></input>
+      <div className='date-section'>
       <label htmlFor="date-selector">Select date:</label>
+
+  
       <input type="date" className="date-selector" id="date-selector" onChange={(e)=>{handleDate(e)}} value={eventObject.date} required></input>
+
       <label htmlFor="time-start">Start:</label>
       <input type="time" className="time-start" id="time-start" onChange={(e)=>{handleTimeStart(e)}} value={eventObject.start_time} required></input>
       <label htmlFor="time-start">End:</label>
       <input type="time" className="time-end" id="time-end" onChange={(e)=>{handleTimeEnd(e)}} value={eventObject.end_time} required></input>
+      </div>
+      
       <input type="url" className="social-link" id="social-link" onChange={(e)=>{handleLink(e)}} placeholder="Paste meeting link/URL here" value={eventObject.social_link} required></input>
       <Button className="form-button" text="Submit"/>
     </form>

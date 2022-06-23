@@ -1,4 +1,7 @@
+import './index.css';
 import Button from "../Button";
+import Image from "../EventImage";
+
 const localHost = "http://localhost:3001";
 
 function ListItem({data, setEvents}) {
@@ -30,12 +33,14 @@ function ListItem({data, setEvents}) {
     return (
       // List Item displaying info for each map iteration
       <div className='event-card'>
-        <h1 className='event-type'>{data.type}</h1>
-        <p className='event-description'>{data.description}</p>
-        <p className='event-author'>{data.author}</p>
-        <p className='date'>{formattedDate}</p>
-        <p className='time-start'>{data.start_time}</p>
-        <p className='time-end'>{data.end_time}</p>
+        <Image/>
+        <div className="event-details">
+          <div className='event-type'>{data.type}</div>
+          <div className='event-description'>{data.description}</div>
+          <div className='event-author'>{data.author}</div>
+          <div className='date'>{formattedDate}</div>
+          <div className='time-start'>{data.start_time}</div>
+          <div className='time-end'>{data.end_time}</div>
         <div className="attendance-counter">
           <p>{`${data.attendance} bootcampers attending`}</p>
           <label htmlFor="check-box">Attending?</label>
@@ -48,3 +53,4 @@ function ListItem({data, setEvents}) {
 }
   
 export default ListItem;
+

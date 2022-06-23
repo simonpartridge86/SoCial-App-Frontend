@@ -8,7 +8,11 @@ import {useState, useEffect} from 'react';
 import Header from '../Header';
 import EventForm from '../EventForm';
 import EventList from '../EventList';
+
+//import Image from '../EventImage';
+
 import Button from '../Button';
+
 
 //////////////////////////////////
 
