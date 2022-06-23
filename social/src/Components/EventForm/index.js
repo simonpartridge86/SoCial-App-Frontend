@@ -40,21 +40,13 @@ function EventForm({addEvent}) {
 
 
   function handleDate(e){
-    const selectedDate = new Date(e.target.value);
-    const now = new Date();
-    const nowFormatted = new Date(now.toDateString())
-    const selectedDateFormatted = new Date(selectedDate.toDateString())
-    // console.log(selectedDate)
-    console.log(now)
-    // console.log(selectedDateFormatted)
-    // console.log(nowFormatted)
-    if(selectedDateFormatted < nowFormatted){
-      alert("Selected date is in the past")
-      setEventObject({...eventObject, date: ""})
-    } else {
-      const eventDate = selectedDate.toDateString();
-      setEventObject({...eventObject, date: eventDate})
-    }
+    //ΩateFormatted < nowFormatted){
+    //   alert("Selected date is in the past")
+    //   setEventObject({...eventObject, date: ""})
+    // } else {
+    //   const eventDate = selectedDate.toDateString();
+      setEventObject({...eventObject, date: e.target.value})
+
   }
 
    ////////////////////////////////////////////////
@@ -81,7 +73,17 @@ function EventForm({addEvent}) {
 
   function onSubmit(e){
     e.preventDefault();
-    console.log(eventObject);
+    const selectedDate = new Date(eventObject.date);
+    const now = new Date();
+    const nowFormatted = new Date(now.toDateString());
+    const selectedDateFormatted = new Date(selectedDate.toDateString());
+    if(selectedDateFormatted < nowFormatted){
+      alert("Selected date is in the past")
+      setEventObject({...eventObject, date: ""})
+    } else if (eventObject.start_time > eventObject.end_time){
+      alert("Meeting time invalid - start time is after end time");
+      setEventObject({...eventObject, start_time: "", end_time: ""})
+    } else {
     // addEvent is a function from the app.js which has been passed down through a prop.
     // We give this function the eventObject - this is a piece of state created by the multiple handle functions above.
     addEvent(eventObject);
@@ -94,6 +96,7 @@ function EventForm({addEvent}) {
       start_time: "",
       end_time: "",
     });
+    }
   }
 
   ////////////////////////////////////////////////
@@ -111,8 +114,10 @@ function EventForm({addEvent}) {
       <input type="text" className="event-author" id="event-author" placeholder="Event host name" onChange={(e)=>{handleAuthor(e)}} value={eventObject.author} required></input>
       <div className='date-section'>
       <label htmlFor="date-selector">Select date:</label>
-      <input type="date" className="date-selector" id="date-selector" onChange={(e)=>{handleDate(e)}} required></input>
-      
+
+  
+      <input type="date" className="date-selector" id="date-selector" onChange={(e)=>{handleDate(e)}} value={eventObject.date} required></input>
+
       <label htmlFor="time-start">Start:</label>
       <input type="time" className="time-start" id="time-start" onChange={(e)=>{handleTimeStart(e)}} value={eventObject.start_time} required></input>
       <label htmlFor="time-start">End:</label>
