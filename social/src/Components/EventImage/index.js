@@ -1,9 +1,28 @@
-import eventImage from './drew-beamer-3SIXZisims4-unsplash.jpg';
+import socialImage from './social.jpg';
+import helpImage from "./codingHelp.jpg";
+import chatImage from "./courseChat.jpg";
+import gamesImage from "./game.jpg";
 
-function Image() {
+function Image({type}) {
+  
+    var src =socialImage;
+
+    if(type==="Coding Help"){
+        src = helpImage;
+    }
+
+    if(type==="Course Chat"){
+        src = chatImage;
+    }
+
+    if(type==="Games Session"){
+        src = gamesImage;
+    }
+
+
     return (
       
-        <img className="image" src={eventImage} alt="neon hello sign" />
+        <img className="image" src={src} alt="neon hello sign" />
       
     );
   }

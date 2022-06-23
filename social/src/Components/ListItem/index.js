@@ -26,14 +26,14 @@ function ListItem({data, setEvents}) {
     //console.log(object);
     const data = await response.json();
     //console.log(data.payload);
-    console.log(data);
+    console.log(data.type);
     setEvents(data.payload);
   }
   
     return (
       // List Item displaying info for each map iteration
       <div className='event-card'>
-        <Image/>
+        <Image type={data.type}/>
         <div className="event-details">
           <div className='event-type'>{data.type}</div>
           <div className='event-description'>{data.description}</div>
