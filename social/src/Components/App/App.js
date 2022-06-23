@@ -2,11 +2,13 @@ import './App.css';
 import React from 'react';
 import {useState, useEffect} from 'react';
 
+
 /////////////////////////////////// 
 
 import Header from '../Header';
 import EventForm from '../EventForm';
 import EventList from '../EventList';
+import Button from '../Button';
 
 //////////////////////////////////
 
@@ -16,7 +18,7 @@ const localHost = "http://localhost:3001"
 // http://localhost:3001/events
 
 const [events, setEvents] = useState([]);
-
+const [formVis, setFormVis] = useState(false);
 ///////////////////////////////////////
 
 async function getEvents() {
@@ -36,6 +38,7 @@ async function postEvent(object){
   const data = await response.json();
   console.log(data.payload);
   setEvents(data.payload);
+  setFormVis(false);
 };
 
 
@@ -87,7 +90,11 @@ useEffect (()=>{
   return (
     <div className="app">
       <Header className="app-header" />
-      <EventForm className="event-form" addEvent={postEvent} />
+      { formVis === false ?
+        <Button className="form-vis" onClick={()=>{setFormVis(true)}} text="Create Event"/>
+      :
+        <EventForm className="event-form" addEvent={postEvent} />
+      }      
       <EventList className="event-list" data={events} />
     </div>
   );
