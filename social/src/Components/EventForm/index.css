@@ -6,6 +6,8 @@ form {
   width: 70vw;
   margin: 50px auto;
   gap: 10px;
+  font-family: 'Roboto', sans-serif, Arial, sans-serif;
+  font-size: 12pt;
 }
 
 span {
@@ -31,7 +33,7 @@ span {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: var(--detail-font),Arial,sans-serif;
+  font-family: 'Roboto', sans-serif, Arial, sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 8px;
