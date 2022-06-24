@@ -1,3 +1,10 @@
+:root {
+  --heading-font: 'Londrina Solid', cursive;
+  --detail-font: 'Roboto', sans-serif;
+  --green: #74C69D;
+  --pink: #F4AAFB;
+}
+
 
 .event-card {
     display: flex;
@@ -24,46 +31,47 @@
 
 .event-type {
   font-size: 2rem;
-  font-family: Tahoma;
+  font-family: var(--heading-font);
   font-weight: bold;
-  color:#F4AAFB;
+  color: var(--pink);
+  letter-spacing: 3px;
 }
 
 .event-description {
-  font-family: Times New Roman;
+  font-family: var(--detail-font);
   font-weight: 800;
   font-size: 1.5rem;
 }
 
 .event-author {
-  font-family: Times New Roman;
+  font-family: var(--detail-font);
   font-size: 1rem;
 }
 
 .date{
-  font-family: Times New Roman;
+  font-family: var(--detail-font);
   font-size: 1.25rem;
 }
 
 .time-start{
-  font-family: Times New Roman;
+  font-family: var(--detail-font);
   font-size: 1.25rem;
 }
 
 .time-end{
-  font-family: Times New Roman;
+  font-family: var(--detail-font);
   font-size: 1.25rem;
 }
 
 .attendance-counter{
-  font-family: Times New Roman;
+  font-family: var(--detail-font);
   font-size: 1rem;
 }
 
 .launch-button{
   width: 200px;
   appearance: button;
-  background-color: #A2B47C;
+  background-color: var(--green);
   background-image: none;
   border: 1px solid #000;
   border-radius: 4px;
@@ -72,9 +80,9 @@
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-family: var(--detail-font),Arial,sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 8px;
   margin: 0 5px 10px 0;
   overflow: visible;
@@ -112,7 +120,7 @@
   }
 }
 
-@media(max-width:720px){
+@media(max-width:1000px){
   .event-card{
     flex-direction: column;
   }
@@ -121,5 +129,3 @@
     max-width: 100%;
   }
 }
-
-

@@ -36,19 +36,19 @@ function ListItem({data, setEvents}) {
         <Image type={data.type}/>
         <div className="event-details">
           <div className='event-type'>{data.type}</div>
-          <div className='event-description'>{data.description}</div>
+          <div className='event-description'>{`"${data.description}"`}</div>
           <div className='event-author'>{`Host: ${data.author}`}</div>
-          <div className='date'>{formattedDate}</div>
-          <div className='time-start'>{data.start_time}</div>
-          <div className='time-end'>{data.end_time}</div>
-
+     
+            <div className='date'>{`Date: ${formattedDate}`}</div>
+            <div className='time-start'>{`Time: ${data.start_time} - ${data.end_time}`}</div>
+       
           <div className="attendance-counter">
             <p>{`${data.attendance} bootcampers attending`}</p>
             <label htmlFor="check-box">Attending?</label>
             <input type="checkbox" id="check-box" onChange={(e)=>{handleCheck(e, data.events_id)}}></input>
           </div>
 
-          <Button className="launch-button" onClick={()=>{window.open(data.social_link, '_blank').focus()}} text="Launch" />
+          <Button className="launch-button" onClick={()=>{window.open(data.social_link, '_blank').focus()}} text="Launch Meeting" />
         </div>
         </div>
     );

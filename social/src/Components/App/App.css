@@ -9,7 +9,7 @@
 .form-vis {
   width: 250px;
   appearance: button;
-  background-color: #A2B47C;
+  background-color: #74C69D;
   background-image: none;
   border: 1px solid #000;
   border-radius: 4px;
@@ -18,9 +18,9 @@
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
+  font-family: 'Roboto', sans-serif, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 600;
   line-height: 45px;
   margin: 0 auto 100px;
   overflow: visible;
@@ -62,4 +62,10 @@
   .form-vis {
     padding: 0 40px;
   }
+}
+
+.team-name {
+  font-size: 25pt;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }

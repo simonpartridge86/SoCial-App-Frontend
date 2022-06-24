@@ -1,24 +1,22 @@
 import socialImage from './social.jpg';
-import helpImage from "./codingHelp.jpg";
-import chatImage from "./courseChat.jpg";
-import gamesImage from "./game.jpg";
+import codingImage from "./groupcoding.jpg";
+import gamesImage from "./games.jpg";
 
 function Image({type}) {
   
     var src =socialImage;
 
-    if(type==="Coding Help"){
-        src = helpImage;
+    if(type==="Social"){
+        src = socialImage;
     }
 
-    if(type==="Course Chat"){
-        src = chatImage;
+    if(type==="Group Coding"){
+        src = codingImage;
     }
 
     if(type==="Games Session"){
         src = gamesImage;
     }
-
 
     return (
       

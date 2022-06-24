@@ -41,7 +41,7 @@ function EventForm({addEvent}) {
 
 
   function handleDate(e){
-    //ΩateFormatted < nowFormatted){
+    //dateFormatted < nowFormatted){
     //   alert("Selected date is in the past")
     //   setEventObject({...eventObject, date: ""})
     // } else {
@@ -108,26 +108,25 @@ function EventForm({addEvent}) {
       <label htmlFor="event-type">Event type:</label>
       <select className="event-selector" id="event-type" onChange={(e)=>{handleType(e)}} value={eventObject.type} required>
         <option value="Social">Social</option>
-        <option value="Coding Help">Coding Help</option>
-        <option value="Course Chat">Course Chat</option>
+        <option value="Coding Help">Group Coding</option>
         <option value="Games Session">Games Session</option>
       </select>
-      <input type="text" className="event-description-input" id="event-description" placeholder="Add event description" onChange={(e)=>{handleDescription(e)}} value={eventObject.description} required></input>
-      <input type="text" className="event-author-input" id="event-author" placeholder="Event host name" onChange={(e)=>{handleAuthor(e)}} value={eventObject.author} required></input>
+      <label htmlFor="event-description">Description:</label>
+      <input type="text" className="event-description-input" id="event-description" placeholder="Add event description here" onChange={(e)=>{handleDescription(e)}} value={eventObject.description} required></input>
+      <label htmlFor="event-author">Host:</label>
+      <input type="text" className="event-author-input" id="event-author" placeholder="Add your name here" onChange={(e)=>{handleAuthor(e)}} value={eventObject.author} required></input>
       <div className='date-section'>
       <label htmlFor="date-selector">Select date:</label>
-
-  
       <input type="date" className="date-selector" id="date-selector" onChange={(e)=>{handleDate(e)}} value={eventObject.date} required></input>
 
-      <label htmlFor="time-start">Start:</label>
+      <label htmlFor="time-start">Start time:</label>
       <input type="time" className="time-start" id="time-start" onChange={(e)=>{handleTimeStart(e)}} value={eventObject.start_time} required></input>
-      <label htmlFor="time-end">End:</label>
+      <label htmlFor="time-end">End time:</label>
       <input type="time" className="time-end"  id="time-end" onChange={(e)=>{handleTimeEnd(e)}} value={eventObject.end_time} required></input>
       </div>
-      
-      <input type="url" className="social-link" id="social-link" onChange={(e)=>{handleLink(e)}} placeholder="Paste meeting link/URL here" value={eventObject.social_link} required></input>
-      <Button className="form-button" text="Submit"/>
+      <label htmlFor="social-link">Meeting link:</label>
+      <input type="url" className="social-link" id="social-link" onChange={(e)=>{handleLink(e)}} placeholder="Paste your meeting link (Zoom/Google/etc) here" value={eventObject.social_link} required></input>
+      <span><Button className="form-button" text="Submit"/></span>
     </form>
   );
 }

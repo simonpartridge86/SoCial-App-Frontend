@@ -101,6 +101,7 @@ useEffect (()=>{
         <EventForm className="event-form" addEvent={postEvent} />
       }   
       <EventList className="event-list" data={events} setEvents={setEvents}/>
+      <h1 className="team-name"> &copy; team mishMash</h1>
     </div>
   );
 }

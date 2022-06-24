@@ -1,7 +1,10 @@
 h1 {
-  font-size: 16vw ;
+  font-family: 'Londrina Solid', cursive;
+  font-size: 16vw;
   text-align: center;
   color: #F4AAFB;
-  margin: 25px auto 75px;
+  margin: 25px auto 50px;
+  letter-spacing: 5px;
+  font-weight: 400;
 }
 
