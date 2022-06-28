@@ -1,14 +1,14 @@
 import './index.css';
-import ListItem from "../ListItem";
+import EventListItem from "../EventListItem";
 
+// Receives all data from App.js - maps over the data and passes down event info (through social prop) to the EventListItem component
 function EventList({className, data, setEvents}) {
-  // Receives all the data from the App.js. Maps over the data and makes a prop called social which it passes to the list item for every event object
-  console.log(data)
+  //console.log(data)
     return (
       <div className={className}>
         {data.map (
-          social => (
-            <ListItem data={social} setEvents={setEvents} key={social.events_id} />
+          eachEvent => (
+            <EventListItem data={eachEvent} setEvents={setEvents} key={eachEvent.events_id} />
           )
         )}
       </div>

@@ -1,8 +1,6 @@
 .event-list{
     margin-bottom: 20px;
-    /* background: red; */
     display: flex;
     flex-direction: column;
     gap: 50px;
-
-  }
+}

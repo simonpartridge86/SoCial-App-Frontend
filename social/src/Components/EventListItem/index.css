@@ -24,7 +24,7 @@
     gap:10px;
   }
 
-.image{
+.event-image{
   max-width: 50%;
   border-radius: 5%;
 }
@@ -125,7 +125,7 @@
     flex-direction: column;
   }
 
-  .image{
+  .event-image{
     max-width: 100%;
   }
 }
