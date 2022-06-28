@@ -1,22 +1,42 @@
-# National Bootcamp - Week Nine Project Brief
+# Project Title: {SoC}ial 
+created by Team mishMash: [Matthew Miller](https://github.com/codedresser), [Simon Partridge](https://github.com/simonpartridge86), [Kunal Shukla](https://github.com/kun-shukla) and [Wanteng Teoh](https://github.com/ten-hub). 
 
-For your project, you’ll be using what you’ve learned on the course so far to try and improve the lives of your users. In this case, the users will be close to home: bootcampers!
+---
+## Index
 
-To do this, you’ll need to take the time to understand your user (a bootcamper), their experiences, and their problems. Specifically, it might be good to focus on how to enhance the remote experience of a bootcamper, or what can help them with the vast amount of learning there is to do as a new developer. What do they need? What problem might they have that your application could solve for them? How can you get into the mindset of your user and keep them at the centre of your problem-solving?
+* [App background](#app-background)
+* [App summary](#app-summary)
+* [Lessons learned](#lessons-learned)
+* [Future plans](#future-plans)
+* [Manual](#manual)
+* [Testing](#testing)
+---
+## App Background
+In week 9 of our School of Code bootcamp, we were challenged to come up with an app to help improve the remote learning experience of our fellow bootcampers in one short week.
 
-The high level outcomes from this project should be:
+As a team, we brainstormed around this theme and identified existing problems we could solve with an app. We ultimately decided to create an app that helps bootcampers socialise with each other and create events outside hours more easily.
 
-- A minimum viable product (MVP) showcasing an innovative full stack application which meets the user need you’ve identified
-- A presentation, complete with how you worked as a team and a demonstration of the project
+## App Summary
+'{SoC}ial' is a web app that allows the bootcampers to create and post online events within the School of Code community, as well as launching the events created by the other bootcampers. 
 
-Your project application might include the following:
+## Lessons learned
+Skills we learned: 
+* Agile methodologies
+* Project planning & management 
+* UX, UI design processes
+* Working in a larger dev team (instead of working just in pairs)
 
-- Include a user experience created in React
-- Build a REST API which is used by your front-end
-- Be supported by a Postgresql database with multiple tables
-- Be built and managed in an agile way
-- Utilise testing for ensuring robust code
+We managed to product an app that fulfills our original brief. We created a team that help. We have created a team manifesto that helped us to stay on track and drive the group forward during decision making phases.
+We realised how important it was to plan out each step and make sure everyone is on the same page at all times.
+We feel we created an environment where everyone felt valued and that they contributed.
+We learned the importance of having a realistic MVP in place and we think we came up with a very achievable design.
+And overall, we are very happy that we got to work with each other and be involved with all aspects of the project.
+Thanks for your time and I will now open up the floor for questions
 
-Remember, you only have a few days to code a solution, so being agile is key. That means brainstorming what you want to build, and working in sprints to deliver value each time. After each sprint, you can reassess and either continue on course or iterate towards a better solution. Have a plan which is incremental steps, rather than all or nothing.
+## Future Plans
 
-Click the link to see the [Project Guidelines](https://github.com/SchoolOfCode/project-guidelines/blob/master/project-week.md)
+
+## Manual
+
+
+## Testing
