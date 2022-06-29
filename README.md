@@ -81,10 +81,11 @@ To run the front-end, navigate to the front-end folder and run the following ter
   npm start
 ```
 
-To run the front-end, navigate to the front-end folder and run the following terminal commands:
+To run the back-end, navigate to the back-end folder and run the following terminal commands:
 
 ```bash
   npm install
+  npm run resetTable
   npm run dev
 ```
 
@@ -142,10 +143,10 @@ TBD
 
 ## Color and Font References
 
-| Color         | Hex                                                               |
-| ------------- | ----------------------------------------------------------------- |
-| Project Green | ![#74C69D](https://via.placeholder.com/10/74C69D?text=+) #74C69D  |
-| Project Pink  | ![#F4AAFB](https://via.placeholder.com/10/F4AAFB?text=+) #F4AAFB  |
+| Color                                            | Hex                                         |
+| ------------------------------------------------ | --------------------------------------------|
+| <span style="color:#74C69D">Project Green</span> | <span style="color:#74C69D">#74C69D</span>  |
+| <span style="color:#F4AAFB">Project Pink</span>  | <span style="color:#F4AAFB">#F4AAFB</span>  |
 
 Header font - [Londrina Solid](https://fonts.google.com/specimen/Londrina+Solid) - examples:<br>
 <img src="./images/header-font-1.png" alt="header-font-1" height="50"/>
