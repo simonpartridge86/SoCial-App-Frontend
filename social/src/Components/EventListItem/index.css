@@ -1,19 +1,9 @@
-:root {
-  --heading-font: 'Londrina Solid', cursive;
-  --detail-font: 'Roboto', sans-serif;
-  --green: #74C69D;
-  --pink: #F4AAFB;
-}
-
-
 .event-card {
     display: flex;
     justify-content: start;
     gap: 20px;
     width:70vw;
-    margin: 0 auto;
-    /* background-color: yellow; */
-    
+    margin: 0 auto;    
   }
 
   .event-details {
@@ -24,7 +14,7 @@
     gap:10px;
   }
 
-.image{
+.event-image{
   max-width: 50%;
   border-radius: 5%;
 }
@@ -125,7 +115,7 @@
     flex-direction: column;
   }
 
-  .image{
+  .event-image{
     max-width: 100%;
   }
 }

@@ -1,8 +1,7 @@
-import Logo from './social-logo.png';
 import './index.css';
 
+// Creates logo header for the app
 function Header({className}) {
-  // Logo for the app
     return (
       <div className={className}>
         <h1>{"{SoC}ial"}</h1>
@@ -10,4 +9,4 @@ function Header({className}) {
     );
   }
   
-  export default Header;
+export default Header;

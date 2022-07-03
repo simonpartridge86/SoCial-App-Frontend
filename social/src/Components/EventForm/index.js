@@ -1,24 +1,25 @@
-
 import './index.css';
 import Button from "../Button";
-import {useState} from 'react';
+import { useState } from 'react';
 
-function EventForm({addEvent}) {
+function EventForm({postEvent}) {
 
-  // starting state of the form 
-  const [eventObject, setEventObject] = useState({
+  // this is the starting state of the form inputs
+  const initialEventState = {
     type: "Social",
     description: "",
     author: "",
     social_link: "",
-    attendance:0,
+    attendance: 0,
     date: "",
     start_time: "",
     end_time: "",
-  })
+  };
+
+  const [eventObject, setEventObject] = useState(initialEventState);
 
   //////////////////////////////////////////////
-  // Below functions store the relevant values from the input boxes of form. They update a new immutable object ready for submission.
+  // Below functions store the relevant values from the text inputs in EventForm. They update the setEventObject immutably.
 
   function handleType(e){
     setEventObject({...eventObject, type: e.target.value})
@@ -36,23 +37,15 @@ function EventForm({addEvent}) {
   }
 
   //////////////////////////////////////////////
-  // Below function stores the relevant date from the input box of form. They update a new immutable object ready for submission.
-  // Dates are being reformatted so they are comparable. If statement stops user entering a date in the past.
-
+  // Below function stores the date from date input in EventForm. It updates the setEventObject immutably.
 
   function handleDate(e){
-    //dateFormatted < nowFormatted){
-    //   alert("Selected date is in the past")
-    //   setEventObject({...eventObject, date: ""})
-    // } else {
-    //   const eventDate = selectedDate.toDateString();
-      setEventObject({...eventObject, date: e.target.value})
-
+    setEventObject({...eventObject, date: e.target.value})
+    //console.log(e.target.value)
   }
 
-   ////////////////////////////////////////////////
-    // Below functions store the relevant values from the input boxes of form. They update a new immutable object ready for submission.
-
+  ////////////////////////////////////////////////
+  // Below functions store the values from time and URL inputs of EventForm. They update the setEventObject immutably.
 
   function handleTimeStart(e){
     setEventObject({...eventObject, start_time: e.target.value})
@@ -70,13 +63,16 @@ function EventForm({addEvent}) {
   }
 
   ////////////////////////////////////////////////
-  // Default reset once form has been submitted
+  // onSubmit validates the form inputs, checks that all fields have been completed, and then submits the eventObject to back-end through POST request.
 
   function onSubmit(e){
     e.preventDefault();
-    const selectedDate = new Date(eventObject.date);
+
+    //code below compares input date with today's date, and rejects form submission if date is in the past
+    //and compares start_time and end_time inputs, and rejects submission if start_time is after end_time
     const now = new Date();
     const nowFormatted = new Date(now.toDateString());
+    const selectedDate = new Date(eventObject.date);
     const selectedDateFormatted = new Date(selectedDate.toDateString());
     if(selectedDateFormatted < nowFormatted){
       alert("Selected date is in the past")
@@ -85,19 +81,9 @@ function EventForm({addEvent}) {
       alert("Meeting time invalid - start time is after end time");
       setEventObject({...eventObject, start_time: "", end_time: ""})
     } else {
-    // addEvent is a function from the app.js which has been passed down through a prop.
-    // We give this function the eventObject - this is a piece of state created by the multiple handle functions above.
-    addEvent(eventObject);
-    setEventObject({
-      type: "Social",
-      attendance: 0,
-      description: "",
-      author: "",
-      social_link: "",
-      date: "",
-      start_time: "",
-      end_time: "",
-    });
+    // postEvent function runs a POST request using our eventObject (postEvent passed from app.js through props)
+    postEvent(eventObject);
+    setEventObject(initialEventState);
     }
   }
 
@@ -118,7 +104,6 @@ function EventForm({addEvent}) {
       <div className='date-section'>
       <label htmlFor="date-selector">Select date:</label>
       <input type="date" className="date-selector" id="date-selector" onChange={(e)=>{handleDate(e)}} value={eventObject.date} required></input>
-
       <label htmlFor="time-start">Start time:</label>
       <input type="time" className="time-start" id="time-start" onChange={(e)=>{handleTimeStart(e)}} value={eventObject.start_time} required></input>
       <label htmlFor="time-end">End time:</label>

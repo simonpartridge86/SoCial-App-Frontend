@@ -1,3 +1,10 @@
+:root {
+  --heading-font: 'Londrina Solid', cursive;
+  --detail-font: 'Roboto', sans-serif;
+  --green: #74C69D;
+  --pink: #F4AAFB;
+}
+
 .app {
   display: flex;
   align-items: center;
@@ -5,11 +12,10 @@
   justify-items: center;
 }
 
-
 .form-vis {
   width: 250px;
   appearance: button;
-  background-color: #74C69D;
+  background-color: var(--green);
   background-image: none;
   border: 1px solid #000;
   border-radius: 4px;
@@ -18,7 +24,7 @@
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Roboto', sans-serif, Arial, sans-serif;
+  font-family: var(--detail-font), Arial, sans-serif;
   font-size: 25px;
   font-weight: 600;
   line-height: 45px;
