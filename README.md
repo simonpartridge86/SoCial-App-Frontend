@@ -1,9 +1,7 @@
 ![Logo](./images/header-font-1.png)
 ---
 
-This README file provides info for the SoCial app.
-
-To view the back-end code, please click [here](https://github.com/simonpartridge86/SoCial-App-Backend).
+This README file provides information about the SoCial app. To view the back-end code, please click [here](https://github.com/simonpartridge86/SoCial-App-Backend).
 
 ---
 ## Index
