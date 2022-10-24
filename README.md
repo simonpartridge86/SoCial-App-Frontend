@@ -2,6 +2,12 @@
 
 ---
 
+This README file provides full details on running/using the SoCial app and a project summary.
+
+To view the corresponding back-end repo code, please click [here](https://github.com/simonpartridge86/SoCial-App-Backend).
+
+---
+
 ## Index
 
 - [Project Description](#project-description)
@@ -71,7 +77,9 @@ We have planned the following functionality, which will be added to the app in d
 
 ## Dev Manual
 
-This project has yet to be deployed, but can be run locally using the following instructions:
+The app can be viewed in deployment [here](https://socialbymishmash.netlify.app/).
+
+Alternatively, the app can be run locally using the following instructions:
 
 Clone the project front-end and back-end separately:
 
@@ -103,6 +111,7 @@ The server should run on http://localhost:3001, while the app should run on http
 To run this project, you will need to add the following environment variables to your .env file
 
 ```
+PORT
 PGHOST
 PGDATABASE
 PGUSER
@@ -150,7 +159,9 @@ npm run test
 
 ### Front-end:
 
-TBD
+```bash
+cypress run
+```
 
 ---
 
