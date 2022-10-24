@@ -1,6 +1,6 @@
 .event-card {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 20px;
     width:70vw;
     margin: 0 auto;    
