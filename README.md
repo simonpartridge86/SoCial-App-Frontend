@@ -2,7 +2,7 @@
 
 ---
 
-This README file provides full details on running/using the SoCial app and a project summary.
+This README file provides full details on running/using the {SoC}ial app and a project summary.
 
 To view the corresponding back-end repo code, please click [here](https://github.com/simonpartridge86/SoCial-App-Backend).
 
